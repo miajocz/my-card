@@ -23,30 +23,48 @@ class MyCard extends LitElement {
     }
 
     main {
-      flex-grow: 1;
-    }
-
-    .logo {
-      margin-top: 36px;
-      animation: app-logo-spin infinite 20s linear;
-    }
-
-    @keyframes app-logo-spin {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    .app-footer {
-      font-size: calc(12px + 0.5vmin);
-      align-items: center;
-    }
-
-    .app-footer a {
-      margin-left: 5px;
+      .button {
+  margin: 30px auto;
+}
+.button button {
+  font-size: 15px;
+  color: red;
+  background-color: white;
+}
+.button button:hover{
+  color: white;
+  background-color: blue;
+}
+.wrapper {
+  width: 400px;
+  border-style: solid;
+  padding: 20px;
+  background-color: white;
+}
+.header{
+  text-align: center;
+}
+.image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 800px) and (min-width: 500px){
+  .button{
+    display: block;
+  }}
+@media screen and (max-width: 500px){
+  .wrapper{
+    transform: scale(0.10);
+  }}
+.dup-button button:focus{
+  color: white;
+  background-color: white;
+}
+.dup-button button:hover{
+  color: white;
+  background-color: blue;
+}
     }
   `;
 
@@ -58,30 +76,22 @@ class MyCard extends LitElement {
   render() {
     return html`
       <main>
-        <div class="logo"><img alt="open-wc logo" src=${logo} /></div>
-        <h1>${this.header}</h1>
+        
+      <div class="wrapper">
+  <img class="image" src="https://logos-world.net/wp-content/uploads/2020/05/Washington-Nationals-Emblem.png" 
+alt="Nationals Logo" width="400" height="200">
+  <div class="header">
+  <h2>Washington Nationals</h2>
+  </div>
+  <h3>Description</h3>
+  <div class="description">
+    <p>The Washington Nationals are an American professional baseball team based in Washington, D.C. They compete in Major League Baseball as a member of the National League East division.</p>
+  </div>
+  <div class="button">
+    <button type="button" data-prototype-url="hax.psu.edu">Details™</button>
+  </div>
+</div>`
 
-        <p>Edit <code>src/MyCard.js</code> and save to reload.</p>
-        <a
-          class="app-link"
-          href="https://open-wc.org/guides/developing-components/code-examples/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Code examples
-        </a>
-      </main>
-
-      <p class="app-footer">
-        🚽 Made with love by
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/open-wc"
-          >open-wc</a
-        >.
-      </p>
-    `;
   }
 }
 
