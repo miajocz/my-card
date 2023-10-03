@@ -41,7 +41,8 @@
     "rimraf": "^3.0.2",
     "rollup": "^2.60.0",
     "rollup-plugin-esbuild": "^5.0.0",
-    "rollup-plugin-workbox": "^6.2.0"
+    "rollup-plugin-workbox": "^6.2.0",
+    "esbuild":"^0.19.4"
   },
   "customElements": "custom-elements.json"
 }
